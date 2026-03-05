@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUSTRATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ill.css">
+</head>
+<body>
+    <h2>Illustration</h2>
+    <h3 class="projects">Projects</h3>
+    
+    <div class="carousel" onclick="handleCarouselClick(event)">
+        <img src="../Images/fish.png" alt="Illustration" class="carousel-image" id="carousel-img" onclick="openImageModal()">
+    </div>
+    
+    <div class="carousel-gallery">
+        <img src="../Images/fish.png" alt="Thumb 1" class="carousel-thumb" onclick="selectCarouselImage(0)">
+        <img src="../Images/soup.PNG" alt="Thumb 2" class="carousel-thumb" onclick="selectCarouselImage(1)">
+        <img src="../Images/flower.PNG" alt="Thumb 3" class="carousel-thumb" onclick="selectCarouselImage(2)">
+    </div>
+    
+    <a href="../index.html" class="back-btn">back</a>
+    
+    <div id="image-modal" class="image-modal" onclick="if(event.target.id === 'image-modal') closeImageModal()">
+        <img src="../Images/fish.png" alt="Illustration" class="modal-image" id="modal-img">
+        <div class="modal-gallery">
+            <img src="../Images/fish.png" alt="Thumb 1" class="gallery-thumb" onclick="selectImage(0, event)">
+            <img src="../Images/soup.PNG" alt="Thumb 2" class="gallery-thumb" onclick="selectImage(1, event)">
+            <img src="../Images/flower.PNG" alt="Thumb 3" class="gallery-thumb" onclick="selectImage(2, event)">
+        </div>
+    </div>
+    
+    <script>
+        const images = ['../Images/fish.png', '../Images/soup.PNG', '../Images/flower.PNG'];
+        let currentIndex = 0;
+        
+        function updateImage() {
+            const imgElement = document.getElementById('carousel-img');
+            imgElement.src = images[currentIndex];
+            document.getElementById('modal-img').src = images[currentIndex];
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+        }
+        
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage();
+        }
+        
+        function openImageModal() {
+            document.getElementById('image-modal').style.display = 'flex';
+        }
+        
+        function closeImageModal() {
+            document.getElementById('image-modal').style.display = 'none';
+        }
+        
+        function selectImage(index, event) {
+            event.stopPropagation();
+            currentIndex = index;
+            updateImage();
+        }
+        
+        function selectCarouselImage(index) {
+            currentIndex = index;
+            updateImage();
+        }
+        
+        function handleCarouselClick(event) {
+            const carousel = event.currentTarget;
+            const rect = carousel.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const midpoint = rect.width / 2;
+            
+            if (x < midpoint) {
+                prevImage();
+            } else {
+                nextImage();
+            }
+        }
+    </script>
+</body>
+</html>

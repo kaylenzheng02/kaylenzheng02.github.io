@@ -1,0 +1,187 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-top: 20px;
+    top: 80px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transform: scaleY(1.2);
+}
+
+.projects {
+    position: absolute;
+    top: 155px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    z-index: 10;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.carousel-image {
+    max-width: 45vw;
+    max-height: 50vh;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image:hover {
+    opacity: 0.8;
+}
+
+.carousel-arrow {
+    display: none;
+}
+
+.prev-arrow {
+    display: none;
+}
+
+.next-arrow {
+    display: none;
+}
+
+.carousel-arrow:hover {
+    display: none;
+}
+
+.carousel-gallery {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.carousel-thumb {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.carousel-thumb:hover {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.fish-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 45vw;
+    max-height: 50vh;
+    object-fit: contain;
+    z-index: 5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.fish-image:hover {
+    opacity: 0.8;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90vw;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.modal-gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.gallery-thumb {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.gallery-thumb:hover {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
