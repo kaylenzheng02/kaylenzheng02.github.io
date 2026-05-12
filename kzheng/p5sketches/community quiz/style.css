@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.emoji-top {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.quiz-card {
+    background: transparent;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.emoji-title {
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 10px;
+    border-radius: 3px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 20px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transform: translateY(3px);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transform: translateY(3px);
+}
+
+#q1::-webkit-slider-thumb,
+#q3::-webkit-slider-thumb,
+#q5::-webkit-slider-thumb,
+#q7::-webkit-slider-thumb {
+    background-image: url('pics/jug.png');
+}
+
+#q1::-moz-range-thumb,
+#q3::-moz-range-thumb,
+#q5::-moz-range-thumb,
+#q7::-moz-range-thumb {
+    background-image: url('pics/jug.png');
+}
+
+/* Crimp for even questions */
+#q2::-webkit-slider-thumb,
+#q4::-webkit-slider-thumb,
+#q6::-webkit-slider-thumb,
+#q8::-webkit-slider-thumb {
+    background-image: url('pics/crimp.png');
+}
+
+#q2::-moz-range-thumb,
+#q4::-moz-range-thumb,
+#q6::-moz-range-thumb,
+#q8::-moz-range-thumb {
+    background-image: url('pics/crimp.png');
+}
+
+button {
+    background-color: #8B9B82;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #758B77;
+}
+
+#result-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #475449;
+    min-height: 1.5em;
+}
+
+#result-image {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}

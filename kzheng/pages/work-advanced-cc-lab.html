@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CC Lab — KZHENG_PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="site">
+  <nav class="top-nav" aria-label="Primary">
+    <a class="top-nav__link" href="../index.html">home</a>
+    <a class="top-nav__link" href="work.html">work</a>
+    <a class="top-nav__link" href="contact.html">info</a>
+  </nav>
+
+  <main class="site-main site-main--page site-main--work-sub site-main--advanced-cc">
+    <p class="site-main__work-back"><a class="site-main__work-back-link" href="work.html">work</a></p>
+    <h1 class="site-main__work-title">Advanced CC Lab</h1>
+    <div class="site-main__advanced-sketches">
+      <figure class="site-main__advanced-figure">
+        <iframe
+          class="site-main__advanced-iframe"
+          title="Circle split interactive sketch"
+          src="../p5sketches/see-embed.html"
+          width="612"
+          height="459"
+          loading="lazy"
+        ></iframe>
+        <figcaption class="site-main__advanced-caption">
+          Click a circle to split it into a pair linked by a fading line; the pieces drift away from the cursor. After a few splits, cells read SPLIT instead of drawing a dot.
+        </figcaption>
+      </figure>
+      <figure class="site-main__advanced-figure">
+        <iframe
+          class="site-main__advanced-iframe"
+          title="Two-hand particle field over webcam (ml5)"
+          src="../p5sketches/kon-embed.html"
+          width="612"
+          height="459"
+          loading="lazy"
+        ></iframe>
+        <figcaption class="site-main__advanced-caption">
+          ml5 hand pose on mirrored video (600×450): particle streams split per hand and orbit each index tip. Pinch thumb and index together to grab (bluer strokes); raise the index finger above middle and thumb for indexing (redder strokes). When both hands are close, colors and speed spike. C clears the canvas—the sketch also prints a short control line at the top.
+        </figcaption>
+      </figure>
+      <figure class="site-main__advanced-figure">
+        <div id="hexcode-host" class="site-main__hexcode-host"></div>
+        <figcaption class="site-main__advanced-caption">
+          The camera feed is quantized into a live palette along the right edge—click a swatch to fill the square and show its hex code. The top-left control plays or pauses the paired track.
+        </figcaption>
+      </figure>
+      <figure class="site-main__advanced-figure">
+        <iframe
+          class="site-main__advanced-iframe"
+          title="Webcam divination oracle"
+          src="../p5sketches/divination-embed.html"
+          width="612"
+          height="459"
+          loading="lazy"
+          allow="camera; microphone"
+        ></iframe>
+        <figcaption class="site-main__advanced-caption">
+          Full-bleed mirrored feed with an “essence” meter from face brightness. Type a question and press Enter: a short ritual picks a mood (bright / neutral / dark) and a line of prophecy, with a sine swell from p5.sound. Optional Google Fonts API key in the embed unlocks the full catalog; otherwise built-in families are used.
+        </figcaption>
+      </figure>
+      <figure class="site-main__advanced-figure site-main__advanced-figure--community-quiz">
+        <div class="site-main__community-quiz" aria-label="What kind of climber are you">
+          <div class="community-quiz-container">
+            <div class="community-quiz-card">
+              <img src="../p5sketches/community%20quiz/pics/emoji.png" alt="" class="community-quiz-emoji" width="200" height="120" decoding="async">
+              <div class="community-quiz-question">
+                <label for="cq-q1">how much do you like heights?</label>
+                <input type="range" id="cq-q1" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q2">do you like air conditioning?</label>
+                <input type="range" id="cq-q2" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q3">do you like being safe...?</label>
+                <input type="range" id="cq-q3" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q4">do you touch grass???</label>
+                <input type="range" id="cq-q4" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q5">is yelling 'allez' your forte?</label>
+                <input type="range" id="cq-q5" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q6">how comfortable are you with outdoor activities?</label>
+                <input type="range" id="cq-q6" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q7">are you a leader or follower?</label>
+                <input type="range" id="cq-q7" min="1" max="10" value="5">
+              </div>
+              <div class="community-quiz-question">
+                <label for="cq-q8">technique or strength</label>
+                <input type="range" id="cq-q8" min="1" max="10" value="5">
+              </div>
+
+              <button type="button" class="community-quiz-btn" id="community-quiz-find">Find My Style</button>
+              <div id="community-quiz-result-text" class="community-quiz-result-text"></div>
+              <img id="community-quiz-result-image" class="community-quiz-result-image" alt="" hidden>
+            </div>
+          </div>
+        </div>
+        <figcaption class="site-main__advanced-caption">
+          A small HTML quiz: eight range questions (jug / crimp thumbs) average into a playful “climber type” line, with canvas-confetti bursts and an optional result image when the score runs hot.
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> KAYLEN ZHENG</p>
+  </footer>
+
+  <script src="../hi.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/addons/p5.sound.min.js"></script>
+  <script src="../p5sketches/hexcode.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    (function () {
+      var picBase = "../p5sketches/community%20quiz/pics/";
+      function findMyStyle() {
+        var scores = [];
+        for (var i = 1; i <= 8; i++) {
+          scores.push(parseInt(document.getElementById("cq-q" + i).value, 10));
+        }
+        var average = scores.reduce(function (a, b) { return a + b; }, 0) / scores.length;
+        var resultDiv = document.getElementById("community-quiz-result-text");
+        var resultImage = document.getElementById("community-quiz-result-image");
+        resultImage.hidden = true;
+        resultImage.removeAttribute("src");
+        if (typeof confetti !== "function") return;
+        if (average <= 3) {
+          resultDiv.textContent = "just stay home and play league sigh";
+          confetti({ particleCount: 100, spread: 100, colors: ["#FF6B6B"] });
+        } else if (average <= 5) {
+          resultDiv.textContent = "indoor climbing!! inhale the microplastic";
+          confetti({ particleCount: 100, spread: 100, colors: ["#4ECDC4"] });
+        } else if (average <= 7) {
+          resultDiv.textContent = "outdoor climbing!!";
+          confetti({ particleCount: 100, spread: 100, colors: ["#FFE66D"] });
+        } else {
+          resultDiv.textContent = "well well well";
+          resultImage.src = picBase + "alex.jpg";
+          resultImage.hidden = false;
+          confetti({ particleCount: 100, spread: 100, colors: ["#95E1D3", "#38A169", "#2F855A"] });
+        }
+      }
+      document.getElementById("community-quiz-find").addEventListener("click", findMyStyle);
+    })();
+  </script>
+</body>
+</html>
