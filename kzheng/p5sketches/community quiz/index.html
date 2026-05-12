@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what kind of climber are you</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-card">
+            <img src="pics/emoji.png" alt="emoji" class="emoji-title">
+        
+        <div class="question">
+            <label>how much do you like heights?</label>
+            <input type="range" id="q1" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>do you like air conditioning?</label>
+            <input type="range" id="q2" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>do you like being safe...?</label>
+            <input type="range" id="q3" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>do you touch grass???</label>
+            <input type="range" id="q4" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>is yelling 'allez' your forte?</label>
+            <input type="range" id="q5" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>how comfortable are you with outdoor activities?</label>
+            <input type="range" id="q6" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>are you a leader or follower?</label>
+            <input type="range" id="q7" min="1" max="10" value="5">
+        </div>
+        
+        <div class="question">
+            <label>technique or strength</label>
+            <input type="range" id="q8" min="1" max="10" value="5">
+        </div>
+        
+        <button onclick="findMyStyle()">Find My Style</button>
+        <div id="result-text"></div>
+        <img id="result-image" src="" alt="result" style="display: none;">
+        </div>
+    </div>
+    
+    <script>
+        function findMyStyle() {
+            const scores = [];
+            for (let i = 1; i <= 8; i++) {
+                scores.push(parseInt(document.getElementById('q' + i).value));
+            }
+            
+            const average = scores.reduce((a, b) => a + b) / scores.length;
+            const resultDiv = document.getElementById('result-text');
+            const resultImage = document.getElementById('result-image');
+            
+            // Hide image by default
+            resultImage.style.display = 'none';
+            
+            if (average <= 3) {
+                resultDiv.textContent = 'just stay home and play league sigh';
+                confetti({ particleCount: 100, spread: 100, colors: ['#FF6B6B'] });
+            } else if (average <= 5) {
+                resultDiv.textContent = 'indoor climbing!! inhale the microplastic';
+                confetti({ particleCount: 100, spread: 100, colors: ['#4ECDC4'] });
+            } else if (average <= 7) {
+                resultDiv.textContent = 'outdoor climbing!!';
+                confetti({ particleCount: 100, spread: 100, colors: ['#FFE66D'] });
+            } else {
+                resultDiv.textContent = 'well well well';
+                resultImage.src = 'pics/alex.jpg';
+                resultImage.style.display = 'block';
+                confetti({ particleCount: 100, spread: 100, colors: ['#95E1D3', '#38A169', '#2F855A'] });
+            }
+        }
+    </script>
+</body>
