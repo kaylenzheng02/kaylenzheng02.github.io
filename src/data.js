@@ -1,0 +1,101 @@
+export const profile = {
+  name: 'Kaylen Zheng',
+  title: 'Frontend Developer & Web Designer',
+  intro:
+    'I design interfaces in Figma and build them in React. Based in New York City.',
+  now: [
+    'Web Developer & Designer at The Locale Creator',
+    'BFA Design & Technology at Parsons',
+  ],
+  email: 'kaylenzheng22@gmail.com',
+  resume: '/Kaylen-Zheng-Resume.pdf',
+  links: {
+    github: 'https://github.com/kaylenzheng02',
+    linkedin: 'https://www.linkedin.com/in/kaylenzheng2/',
+  },
+}
+
+export const projects = [
+  {
+    title: 'Pidge',
+    category: 'Web App · Hackathon',
+    year: '2026',
+    summary:
+      'A climate-health dashboard that helps care teams find and follow up with high-risk patients. Built at the Health in Climate AI Hackathon at Cornell Tech.',
+    contribution:
+      'I built the entire front end: interactive ZIP code risk maps, patient-status charts, and workflows for check-ins, resource matching, and care-team escalation.',
+    role: 'Front-End Developer',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
+    image: '',
+    live: '',
+    code: 'https://github.com/kaylenzheng02/Health-in-AI-Hackathon-2026',
+  },
+  {
+    title: 'The Locale Creator',
+    category: 'Website · Client Work',
+    year: '2026',
+    summary:
+      'The company website, taken from Figma prototypes to a responsive front end that works across desktop and mobile.',
+    contribution:
+      'I design and build the full front end with reusable components, and wrote Python and Node.js services for user data and traffic analytics.',
+    role: 'Web Developer & Designer',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Node.js', 'Python'],
+    image: '',
+    live: '',
+    code: '',
+  },
+  {
+    title: 'Studio Environment',
+    category: 'Browser Game',
+    year: '',
+    summary: 'A web-based game built with JavaScript that runs in the browser.',
+    contribution: '',
+    role: '',
+    tech: ['JavaScript'],
+    image: '',
+    live: '',
+    code: 'https://github.com/kaylenzheng02/Studio-Environment-Final',
+  },
+  {
+    title: 'Packaging & Brand Design',
+    category: 'Print & Digital Design',
+    year: '2024 – 2026',
+    summary:
+      'Product labels, packaging, and promotional graphics for Allstar Wine & Liquor, keeping the brand consistent across product lines.',
+    contribution:
+      'I also updated website content to support digital marketing, contributing to a 35% increase in website visits.',
+    role: 'Product Designer',
+    tech: ['Photoshop', 'Illustrator', 'InDesign'],
+    image: '',
+    live: '',
+    code: '',
+  },
+]
+
+export const about = [
+  "I'm a Design and Technology student at Parsons School of Design, minoring in Data Visualization. I like working where design meets code: I care about typography and layout as much as clean, maintainable components.",
+  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C++ and Python for my school's robotics team.",
+]
+
+export const capabilities = [
+  {
+    title: 'Design',
+    items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'Responsive layouts'],
+  },
+  {
+    title: 'Develop',
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'Node.js'],
+  },
+  {
+    title: 'Data & Hardware',
+    items: ['Recharts', 'Leaflet', 'Python', 'C++', 'Arduino', 'ESP32', 'Raspberry Pi'],
+  },
+]
+
+export const experience = [
+  { role: 'Web Developer & Designer', company: 'The Locale Creator', date: '2026 – Now' },
+  { role: 'Student Assistant', company: 'Parsons Design & Technology', date: '2026' },
+  { role: 'Robotics Team Member', company: 'The New School', date: '2025 – 2026' },
+  { role: 'Product Designer', company: 'Allstar Wine & Liquor', date: '2024 – 2026' },
+  { role: 'Finance & Accounting Intern', company: 'Amerasia Bank', date: '2025' },
+]
