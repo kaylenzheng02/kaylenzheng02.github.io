@@ -216,7 +216,7 @@ function Hero() {
 
 function Project({ project, index }) {
   const number = String(index + 1).padStart(2, '0')
-  const images = project.images ?? (project.image ? [{ src: project.image, alt: `${project.title} preview` }] : [])
+  const images = project.images ?? []
 
   return (
     <article className="project reveal">

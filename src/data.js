@@ -2,7 +2,7 @@ export const profile = {
   name: 'Kaylen Zheng',
   title: 'Frontend Developer & Web Designer',
   intro:
-    'I design interfaces in Figma and build them with React and Next.js, from a student arts magazine to a climate-health dashboard. Based in New York City.',
+    'I design and build websites that are clear, intuitive, and easy to use. Based in New York City.',
   now: [
     'Web Developer & Designer at The Locale Creator',
     'BFA Design & Technology at Parsons',
@@ -30,7 +30,6 @@ export const projects = [
       { src: '/projects/pidge/cover.webp', alt: 'Pidge community needs page with unresolved needs charted by ZIP code' },
       { src: '/projects/pidge/resources-cover.webp', alt: 'Pidge community resources page with a map and resource directory' },
     ],
-    live: '',
     devpost: 'https://devpost.com/software/pidge',
     code: 'https://github.com/kaylenzheng02/Health-in-AI-Hackathon-2026',
   },
@@ -89,8 +88,6 @@ export const projects = [
       },
     ],
     compact: true,
-    live: '',
-    code: '',
   },
 ]
 
