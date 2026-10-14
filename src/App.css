@@ -151,7 +151,7 @@ main {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.75rem;
 }
 
 .nav-links {
@@ -584,6 +584,22 @@ main {
   margin: 0 0 1.25rem;
   font-size: 1.15rem;
   color: var(--muted);
+}
+
+.about-sketches {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-sketches img {
+  display: block;
+  width: 120px;
+  height: 160px;
+  object-fit: contain;
+  background: #fff;
 }
 
 .capabilities {

@@ -95,8 +95,14 @@ export const projects = [
 ]
 
 export const about = [
-  "I'm studying Design and Technology with a minor in Data Visualization at Parsons School of Design. I'm interested in building tools that help people understand and interact with data, and in designing interfaces that are both functional and intuitive,",
-  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C/C++ and Python for my school's robotics team, including machine learning that guides robot movement.",
+  "I'm a Design and Technology student at Parsons School of Design, minoring in Data Visualization. What I enjoy most is developing web interfaces, especially tools that make data easier to understand and explore. I want everything I build to feel intuitive and work well.",
+  "Beyond the web, I have a particular interest in robotics and program for my school's team. Away from the screen, I'm usually rock climbing, hiking, drawing, or reading science fiction.",
+]
+
+export const sketches = [
+  { src: '/about/sketch-osaka-castle.webp', alt: 'Pen sketch of Osaka Castle' },
+  { src: '/about/sketch-pat-garrett.webp', alt: 'Red ink drawing of a racer with a revolver, matches, and a Pat Garrett sign' },
+  { src: '/about/sketch-sardine.webp', alt: 'Pink halftone sardines behind the words "want a sardine?"' },
 ]
 
 export const capabilities = [

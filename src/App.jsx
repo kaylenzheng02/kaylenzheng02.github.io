@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
-import { profile, projects, about, capabilities, experience } from './data.js'
+import { profile, projects, about, sketches, capabilities, experience } from './data.js'
 import './App.css'
 
 const sections = ['work', 'about', 'contact']
@@ -144,7 +144,7 @@ function Nav({ theme, onToggleTheme }) {
               {id}
             </a>
           ))}
-          <a href={profile.resume} className="btn btn-small" target="_blank" rel="noreferrer">
+          <a href={profile.resume} className="link" target="_blank" rel="noreferrer">
             Résumé
           </a>
         </nav>
@@ -307,6 +307,11 @@ function About() {
           {about.map((p) => (
             <p key={p}>{p}</p>
           ))}
+          <div className="about-sketches">
+            {sketches.map((s) => (
+              <img key={s.src} src={s.src} alt={s.alt} loading="lazy" />
+            ))}
+          </div>
         </div>
         <div className="capabilities">
           {capabilities.map((c, i) => (
