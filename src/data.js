@@ -48,7 +48,7 @@ export const projects = [
       { src: '/projects/locale-creator/home.webp', alt: 'The Locale Creator home page with the magazine logo and issue covers' },
       { src: '/projects/locale-creator/issue-light.webp', alt: 'The Locale Creator issue page in light mode with the cover and spreads' },
     ],
-    live: 'https://thelocalecreator.com',
+    live: 'https://bankerton-banks.github.io/ThelocalecreatorNEW/Homepage/Homepage.html',
     code: 'https://github.com/bankerton-banks/ThelocalecreatorNEW',
   },
   {
