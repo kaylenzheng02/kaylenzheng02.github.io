@@ -95,7 +95,7 @@ export const projects = [
 ]
 
 export const about = [
-  "I'm a Design and Technology student at Parsons School of Design, minoring in Data Visualization. I like working where design meets code: I care about typography and layout as much as clean, maintainable components.",
+  "I'm studying Design and Technology with a minor in Data Visualization at Parsons School of Design. I'm interested in building tools that help people understand and interact with data, and in designing interfaces that are both functional and intuitive,",
   "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C/C++ and Python for my school's robotics team, including machine learning that guides robot movement.",
 ]
 
@@ -125,7 +125,7 @@ export const capabilities = [
 export const experience = [
   { role: 'Web Developer & Designer', company: 'The Locale Creator', date: '2026 – Now' },
   { role: 'Student Assistant', company: 'Parsons Design & Technology', date: '2026' },
-  { role: 'Robotics Team Member', company: 'The New School', date: '2025 – 2026' },
+  { role: 'Robotics Programmer', company: 'Parsons Robotics Team', date: '2025 – 2026' },
   { role: 'Product Designer', company: 'Allstar Wine & Liquor', date: '2024 – 2026' },
   { role: 'Finance & Accounting Intern', company: 'Amerasia Bank', date: '2025' },
 ]

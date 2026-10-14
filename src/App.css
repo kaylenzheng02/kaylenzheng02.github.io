@@ -216,10 +216,21 @@ main {
 .hero {
   position: relative;
   min-height: calc(100vh - 70px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
   padding: 4rem 0;
+}
+
+.hero-photo {
+  width: clamp(240px, 28vw, 340px);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero h1 {
@@ -577,6 +588,7 @@ main {
 
 .capabilities {
   display: grid;
+  align-content: start;
   gap: 2rem;
 }
 
@@ -697,6 +709,15 @@ main {
 
 /* Mobile */
 @media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-photo {
+    width: min(100%, 320px);
+  }
+
   .project,
   .about {
     grid-template-columns: 1fr;

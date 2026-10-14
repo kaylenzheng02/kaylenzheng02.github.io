@@ -180,27 +180,32 @@ function Hero() {
 
   return (
     <section id="top" className="hero">
-      <h1>
-        <AnimatedWords text={profile.name} />
-        <span className="hero-title hero-muted">
-          <AnimatedWords text={profile.title} start={nameCount} />
-        </span>
-      </h1>
-      <p className="hero-intro hero-fade" style={{ '--i': 7 }}>
-        {profile.intro}
-      </p>
-      <ul className="hero-now hero-fade" style={{ '--i': 8 }}>
-        {profile.now.map((line) => (
-          <li key={line}>{line}</li>
-        ))}
-      </ul>
-      <div className="hero-actions hero-fade" style={{ '--i': 9 }}>
-        <a href="#work" className="btn">
-          See my work
-        </a>
-        <a href={`mailto:${profile.email}`} className="btn btn-outline" onClick={copyEmail} aria-live="polite">
-          {copied ? 'Email copied!' : 'Email me'}
-        </a>
+      <div className="hero-content">
+        <h1>
+          <AnimatedWords text={profile.name} />
+          <span className="hero-title hero-muted">
+            <AnimatedWords text={profile.title} start={nameCount} />
+          </span>
+        </h1>
+        <p className="hero-intro hero-fade" style={{ '--i': 7 }}>
+          {profile.intro}
+        </p>
+        <ul className="hero-now hero-fade" style={{ '--i': 8 }}>
+          {profile.now.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
+        <div className="hero-actions hero-fade" style={{ '--i': 9 }}>
+          <a href="#work" className="btn">
+            See my work
+          </a>
+          <a href={`mailto:${profile.email}`} className="btn btn-outline" onClick={copyEmail} aria-live="polite">
+            {copied ? 'Email copied!' : 'Email me'}
+          </a>
+        </div>
+      </div>
+      <div className="hero-photo hero-fade" style={{ '--i': 6 }}>
+        <img src="/about/kaylen-peace.webp" alt="Kaylen Zheng smiling and making peace signs in front of a black-and-white mural" />
       </div>
       <a href="#work" className="scroll-cue hero-fade" style={{ '--i': 11 }} aria-label="Scroll to work">
         <span />
