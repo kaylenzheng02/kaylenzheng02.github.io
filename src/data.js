@@ -36,17 +36,20 @@ export const projects = [
   },
   {
     title: 'The Locale Creator',
-    category: 'Website · Client Work',
+    category: 'Website · Student Organization',
     year: '2026',
     summary:
-      'The company website, taken from Figma prototypes to a responsive front end that works across desktop and mobile.',
+      'The website for The Locale Creator, a student-run arts magazine at Parsons, taken from Figma designs to a responsive site that works across desktop and mobile.',
     contribution:
-      'I design and build the full front end with reusable components, and wrote Python and Node.js services for user data and traffic analytics.',
+      'I designed every page in Figma and built the front end in code, working with the team to finalize each page. I also managed the backend, written in Python and Node.js, for user data and traffic analytics.',
     role: 'Web Developer & Designer',
     tech: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Node.js', 'Python'],
-    image: '',
-    live: '',
-    code: '',
+    images: [
+      { src: '/projects/locale-creator/home.webp', alt: 'The Locale Creator home page with the magazine logo and issue covers' },
+      { src: '/projects/locale-creator/issue-light.webp', alt: 'The Locale Creator issue page in light mode with the cover and spreads' },
+    ],
+    live: 'https://thelocalecreator.com',
+    code: 'https://github.com/bankerton-banks/ThelocalecreatorNEW',
   },
   {
     title: 'Studio Environment',
