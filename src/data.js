@@ -52,15 +52,20 @@ export const projects = [
     code: 'https://github.com/bankerton-banks/ThelocalecreatorNEW',
   },
   {
-    title: 'Studio Environment',
+    title: 'What a Day',
     category: 'Browser Game',
-    year: '',
-    summary: 'A web-based game built with JavaScript that runs in the browser.',
-    contribution: '',
-    role: '',
-    tech: ['JavaScript'],
-    image: '',
-    live: '',
+    year: '2026',
+    summary:
+      'An interactive story game about a businessman pulled out of his office routine and dropped into a surreal, fog-filled forest, where the player’s choices decide how he adapts.',
+    contribution:
+      'I wrote the storyline, hand-drew all of the illustrations, and developed the entire game, from the branching scenes and transitions to the interactive sticky-note start screen and sound.',
+    role: 'Designer, Illustrator & Developer',
+    tech: ['JavaScript', 'HTML', 'CSS', 'Adobe Creative Suite'],
+    images: [
+      { src: '/projects/studio-environment/sticky-notes.webp', alt: 'What a Day start screen covered in sticky notes with office to-dos' },
+      { src: '/projects/studio-environment/illustration.webp', alt: 'Illustration of two figures in a teal forest above a field of red grass' },
+    ],
+    live: 'https://kaylenzheng02.github.io/Studio-Environment-Final/',
     code: 'https://github.com/kaylenzheng02/Studio-Environment-Final',
   },
   {
@@ -91,7 +96,7 @@ export const capabilities = [
   },
   {
     title: 'Develop',
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'Node.js'],
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'Node.js', 'Git', 'Visual Studio'],
   },
   {
     title: 'Data & Hardware',

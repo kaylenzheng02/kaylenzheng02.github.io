@@ -435,6 +435,7 @@ main {
 
 .project-media:has(img) {
   aspect-ratio: auto;
+  border: 0;
 }
 
 .project-media img {
@@ -455,7 +456,6 @@ main {
 
 .project-media-stack img {
   width: 80%;
-  border: 1px solid var(--border);
 }
 
 .project-media-stack img:nth-child(even) {
