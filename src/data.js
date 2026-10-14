@@ -2,7 +2,7 @@ export const profile = {
   name: 'Kaylen Zheng',
   title: 'Frontend Developer & Web Designer',
   intro:
-    'I design interfaces in Figma and build them in React. Based in New York City.',
+    'I design interfaces in Figma and build them with React and Next.js, from a student arts magazine to a climate-health dashboard. Based in New York City.',
   now: [
     'Web Developer & Designer at The Locale Creator',
     'BFA Design & Technology at Parsons',

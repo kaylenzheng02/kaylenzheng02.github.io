@@ -15,6 +15,40 @@ function useTheme() {
   return [theme, () => setTheme(theme === 'dark' ? 'light' : 'dark')]
 }
 
+function useCopyEmail() {
+  const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    if (!copied) return
+    const timer = setTimeout(() => setCopied(false), 2500)
+    return () => clearTimeout(timer)
+  }, [copied])
+
+  const fallbackCopy = () => {
+    const field = document.createElement('textarea')
+    field.value = profile.email
+    field.setAttribute('readonly', '')
+    field.style.position = 'fixed'
+    field.style.opacity = '0'
+    document.body.appendChild(field)
+    field.select()
+    const ok = document.execCommand('copy')
+    field.remove()
+    if (ok) setCopied(true)
+  }
+
+  // mailto only works when the visitor has a default mail app, so also copy the address
+  const copy = () => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(profile.email).then(() => setCopied(true), fallbackCopy)
+    } else {
+      fallbackCopy()
+    }
+  }
+
+  return [copied, copy]
+}
+
 function useReveal() {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -141,38 +175,34 @@ function AnimatedWords({ text, start = 0 }) {
 }
 
 function Hero() {
-  const [first, second] = profile.title.split(' & ')
-  const firstCount = first.split(' ').length
+  const nameCount = profile.name.split(' ').length
+  const [copied, copyEmail] = useCopyEmail()
 
   return (
     <section id="top" className="hero">
-      <p className="eyebrow hero-fade" style={{ '--i': 0 }}>
-        {profile.name}
-      </p>
       <h1>
-        <AnimatedWords text={first} start={1} />
-        <br />
-        <span className="hero-muted">
-          <AnimatedWords text={`& ${second}`} start={firstCount + 1} />
+        <AnimatedWords text={profile.name} />
+        <span className="hero-title hero-muted">
+          <AnimatedWords text={profile.title} start={nameCount} />
         </span>
       </h1>
-      <p className="hero-intro hero-fade" style={{ '--i': 6 }}>
+      <p className="hero-intro hero-fade" style={{ '--i': 7 }}>
         {profile.intro}
       </p>
-      <ul className="hero-now hero-fade" style={{ '--i': 7 }}>
+      <ul className="hero-now hero-fade" style={{ '--i': 8 }}>
         {profile.now.map((line) => (
           <li key={line}>{line}</li>
         ))}
       </ul>
-      <div className="hero-actions hero-fade" style={{ '--i': 8 }}>
+      <div className="hero-actions hero-fade" style={{ '--i': 9 }}>
         <a href="#work" className="btn">
           See my work
         </a>
-        <a href={`mailto:${profile.email}`} className="btn btn-outline">
-          Email me
+        <a href={`mailto:${profile.email}`} className="btn btn-outline" onClick={copyEmail} aria-live="polite">
+          {copied ? 'Email copied!' : 'Email me'}
         </a>
       </div>
-      <a href="#work" className="scroll-cue hero-fade" style={{ '--i': 10 }} aria-label="Scroll to work">
+      <a href="#work" className="scroll-cue hero-fade" style={{ '--i': 11 }} aria-label="Scroll to work">
         <span />
       </a>
     </section>
@@ -299,14 +329,19 @@ function About() {
 }
 
 function Contact() {
+  const [copied, copyEmail] = useCopyEmail()
+
   return (
     <section id="contact" className="contact">
       <div className="reveal">
         <p className="eyebrow">Open to frontend and web design roles</p>
         <h2>Let's build something together.</h2>
-        <a href={`mailto:${profile.email}`} className="contact-email">
+        <a href={`mailto:${profile.email}`} className="contact-email" onClick={copyEmail}>
           {profile.email}
         </a>
+        <p className="contact-copied" aria-live="polite">
+          {copied ? 'Copied to your clipboard' : 'Click to email or copy'}
+        </p>
         <div className="social">
           <a href={profile.links.github} className="link" target="_blank" rel="noreferrer">
             GitHub ↗
