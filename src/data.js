@@ -73,12 +73,22 @@ export const projects = [
     category: 'Print & Digital Design',
     year: '2024 – 2026',
     summary:
-      'Product labels, packaging, and promotional graphics for Allstar Wine & Liquor, keeping the brand consistent across product lines.',
+      'Brand design for Allstar Wine & Liquor, a neighborhood wine shop in Little Neck, New York: business cards, product labels, packaging, and promotional graphics built on one consistent visual identity.',
     contribution:
-      'I also updated website content to support digital marketing, contributing to a 35% increase in website visits.',
+      'I designed the business cards and a promotional series for wine, spirits, and sparkling wine, keeping every piece in the same maroon-and-cream palette and serif type. I also updated website content to support digital marketing, contributing to a 35% increase in website visits.',
     role: 'Product Designer',
     tech: ['Photoshop', 'Illustrator', 'InDesign'],
-    image: '',
+    images: [
+      {
+        src: '/projects/allstar/promo-sparkling.webp',
+        alt: 'Allstar sparkling wine promo: "Make it a moment." with two champagne flutes',
+      },
+      {
+        src: '/projects/allstar/business-cards.webp',
+        alt: 'Front and back of the Allstar Wine & Liquor business cards',
+      },
+    ],
+    compact: true,
     live: '',
     code: '',
   },
@@ -86,21 +96,29 @@ export const projects = [
 
 export const about = [
   "I'm a Design and Technology student at Parsons School of Design, minoring in Data Visualization. I like working where design meets code: I care about typography and layout as much as clean, maintainable components.",
-  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C++ and Python for my school's robotics team, including machine learning that guides robot movement.",
+  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C/C++ and Python for my school's robotics team, including machine learning that guides robot movement.",
 ]
 
 export const capabilities = [
   {
+    title: 'Languages',
+    items: ['JavaScript', 'TypeScript', 'HTML & CSS', 'Python', 'C/C++'],
+  },
+  {
+    title: 'Frameworks & Libraries',
+    items: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Recharts', 'Leaflet'],
+  },
+  {
     title: 'Design',
-    items: ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'Responsive layouts'],
+    items: ['Figma', 'Adobe Creative Cloud', 'Responsive layouts'],
   },
   {
-    title: 'Develop',
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML & CSS', 'Tailwind CSS', 'Node.js', 'Git', 'Visual Studio'],
+    title: 'Tools',
+    items: ['Git', 'Visual Studio'],
   },
   {
-    title: 'Data & Hardware',
-    items: ['Recharts', 'Leaflet', 'Python', 'Machine learning', 'C++', 'Arduino', 'ESP32', 'Raspberry Pi'],
+    title: 'Hardware & ML',
+    items: ['Arduino', 'ESP32', 'Raspberry Pi', 'Machine learning'],
   },
 ]
 

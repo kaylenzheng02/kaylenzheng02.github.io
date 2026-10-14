@@ -436,6 +436,7 @@ main {
 .project-media:has(img) {
   aspect-ratio: auto;
   border: 0;
+  background: none;
 }
 
 .project-media img {
@@ -444,7 +445,6 @@ main {
   height: auto;
   object-fit: cover;
 }
-
 .project-media-stack {
   display: flex;
   flex-direction: column;
@@ -460,6 +460,20 @@ main {
 
 .project-media-stack img:nth-child(even) {
   align-self: flex-end;
+}
+
+.project-media-compact {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-media-compact img:first-child {
+  width: 72%;
+}
+
+.project-media-compact img:nth-child(even) {
+  width: 75.5%;
+  align-self: center;
 }
 
 .project-placeholder {
@@ -696,7 +710,6 @@ main {
   .project-media-stack img {
     width: 100%;
   }
-
   .projects {
     gap: 4.5rem;
   }

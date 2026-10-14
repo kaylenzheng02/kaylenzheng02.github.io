@@ -215,7 +215,15 @@ function Project({ project, index }) {
 
   return (
     <article className="project reveal">
-      <div className={images.length > 1 ? 'project-media project-media-stack' : 'project-media'}>
+      <div
+        className={[
+          'project-media',
+          images.length > 1 && 'project-media-stack',
+          project.compact && 'project-media-compact',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
         {images.length > 0 ? (
           images.map((img) => <img key={img.src} src={img.src} alt={img.alt} />)
         ) : (
