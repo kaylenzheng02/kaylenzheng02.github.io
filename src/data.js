@@ -21,13 +21,17 @@ export const projects = [
     category: 'Web App · Hackathon',
     year: '2026',
     summary:
-      'A climate-health dashboard that helps care teams find and follow up with high-risk patients. Built at the Health in Climate AI Hackathon at Cornell Tech.',
+      'A climate-health dashboard that helps care teams find and follow up with high-risk patients. It uses real-time environmental and community data, and an interactive map that locates nearby resources like cooling centers, pharmacies, and food pantries. Built at the Health in Climate AI Hackathon at Cornell Tech.',
     contribution:
-      'I built the entire front end: interactive ZIP code risk maps, patient-status charts, and workflows for check-ins, resource matching, and care-team escalation.',
-    role: 'Front-End Developer',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
-    image: '',
+      'I designed the entire front end in Figma, then built it in code: the resource map, ZIP code risk views, patient-status charts, and workflows for check-ins, resource matching, and care-team escalation.',
+    role: 'Front-End Designer & Developer',
+    tech: ['Figma', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet', 'Machine Learning'],
+    images: [
+      { src: '/projects/pidge/cover.webp', alt: 'Pidge community needs page with unresolved needs charted by ZIP code' },
+      { src: '/projects/pidge/resources-cover.webp', alt: 'Pidge community resources page with a map and resource directory' },
+    ],
     live: '',
+    devpost: 'https://devpost.com/software/pidge',
     code: 'https://github.com/kaylenzheng02/Health-in-AI-Hackathon-2026',
   },
   {
@@ -74,7 +78,7 @@ export const projects = [
 
 export const about = [
   "I'm a Design and Technology student at Parsons School of Design, minoring in Data Visualization. I like working where design meets code: I care about typography and layout as much as clean, maintainable components.",
-  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C++ and Python for my school's robotics team.",
+  "Before moving into web development, I spent over two years as a product designer creating packaging and marketing work. Outside of the web, I write embedded C++ and Python for my school's robotics team, including machine learning that guides robot movement.",
 ]
 
 export const capabilities = [
@@ -88,7 +92,7 @@ export const capabilities = [
   },
   {
     title: 'Data & Hardware',
-    items: ['Recharts', 'Leaflet', 'Python', 'C++', 'Arduino', 'ESP32', 'Raspberry Pi'],
+    items: ['Recharts', 'Leaflet', 'Python', 'Machine learning', 'C++', 'Arduino', 'ESP32', 'Raspberry Pi'],
   },
 ]
 

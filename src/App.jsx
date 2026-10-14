@@ -181,12 +181,13 @@ function Hero() {
 
 function Project({ project, index }) {
   const number = String(index + 1).padStart(2, '0')
+  const images = project.images ?? (project.image ? [{ src: project.image, alt: `${project.title} preview` }] : [])
 
   return (
     <article className="project reveal">
-      <div className="project-media">
-        {project.image ? (
-          <img src={project.image} alt={`${project.title} preview`} />
+      <div className={images.length > 1 ? 'project-media project-media-stack' : 'project-media'}>
+        {images.length > 0 ? (
+          images.map((img) => <img key={img.src} src={img.src} alt={img.alt} />)
         ) : (
           <div className="project-placeholder">
             <span className="project-placeholder-num">{number}</span>
@@ -212,11 +213,16 @@ function Project({ project, index }) {
             <li key={t}>{t}</li>
           ))}
         </ul>
-        {(project.live || project.code) && (
+        {(project.live || project.devpost || project.code) && (
           <div className="project-links">
             {project.live && (
               <a href={project.live} className="link" target="_blank" rel="noreferrer">
                 Visit site ↗
+              </a>
+            )}
+            {project.devpost && (
+              <a href={project.devpost} className="link" target="_blank" rel="noreferrer">
+                Devpost ↗
               </a>
             )}
             {project.code && (
