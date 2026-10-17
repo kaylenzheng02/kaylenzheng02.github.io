@@ -17,6 +17,23 @@ export const profile = {
 
 export const projects = [
   {
+    title: 'The Locale Creator',
+    category: 'Website · Student Organization',
+    year: '2026 – Now',
+    summary:
+      'The website for The Locale Creator, a student-run arts magazine at Parsons, taken from Figma designs to a responsive site that works across desktop and mobile.',
+    contribution:
+      'I designed every page in Figma and built the front end in code, working with the team to finalize each page. I also managed the backend, written in Python and Node.js, for user data and traffic analytics.',
+    role: 'Web Developer & Designer',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Node.js', 'Python'],
+    images: [
+      { src: '/projects/locale-creator/home.webp', alt: 'The Locale Creator home page with the magazine logo and issue covers' },
+      { src: '/projects/locale-creator/issue-light.webp', alt: 'The Locale Creator issue page in light mode with the cover and spreads' },
+    ],
+    live: 'https://bankerton-banks.github.io/ThelocalecreatorNEW/Homepage/Homepage.html',
+    code: 'https://github.com/bankerton-banks/ThelocalecreatorNEW',
+  },
+  {
     title: 'Pidge',
     category: 'Web App · Hackathon',
     year: '2026',
@@ -32,23 +49,6 @@ export const projects = [
     ],
     devpost: 'https://devpost.com/software/pidge',
     code: 'https://github.com/kaylenzheng02/Health-in-AI-Hackathon-2026',
-  },
-  {
-    title: 'The Locale Creator',
-    category: 'Website · Student Organization',
-    year: '2026',
-    summary:
-      'The website for The Locale Creator, a student-run arts magazine at Parsons, taken from Figma designs to a responsive site that works across desktop and mobile.',
-    contribution:
-      'I designed every page in Figma and built the front end in code, working with the team to finalize each page. I also managed the backend, written in Python and Node.js, for user data and traffic analytics.',
-    role: 'Web Developer & Designer',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Node.js', 'Python'],
-    images: [
-      { src: '/projects/locale-creator/home.webp', alt: 'The Locale Creator home page with the magazine logo and issue covers' },
-      { src: '/projects/locale-creator/issue-light.webp', alt: 'The Locale Creator issue page in light mode with the cover and spreads' },
-    ],
-    live: 'https://bankerton-banks.github.io/ThelocalecreatorNEW/Homepage/Homepage.html',
-    code: 'https://github.com/bankerton-banks/ThelocalecreatorNEW',
   },
   {
     title: 'What a Day',
