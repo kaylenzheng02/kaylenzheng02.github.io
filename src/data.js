@@ -96,12 +96,6 @@ export const about = [
   "Beyond the web, I have a particular interest in robotics and program for my school's team. Away from the screen, I'm usually rock climbing, hiking, drawing, or reading science fiction.",
 ]
 
-export const sketches = [
-  { src: '/about/sketch-osaka-castle.webp', alt: 'Pen sketch of Osaka Castle' },
-  { src: '/about/sketch-pat-garrett.webp', alt: 'Red ink drawing of a racer with a revolver, matches, and a Pat Garrett sign' },
-  { src: '/about/sketch-sardine.webp', alt: 'Pink halftone sardines behind the words "want a sardine?"' },
-]
-
 export const capabilities = [
   {
     title: 'Languages',

@@ -211,10 +211,37 @@ main {
   width: clamp(240px, 28vw, 340px);
 }
 
-.hero-photo img {
+.flip-card {
   display: block;
   width: 100%;
-  height: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  perspective: 1200px;
+}
+
+.flip-inner {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  transform-style: preserve-3d;
+  transition: transform 0.8s var(--ease);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  background: #fff;
 }
 
 .hero h1 {
@@ -367,6 +394,10 @@ main {
 
   .word > span {
     transform: none;
+  }
+
+  .flip-inner {
+    transition: none;
   }
 }
 
@@ -568,22 +599,6 @@ main {
   margin: 0 0 1.25rem;
   font-size: 1.15rem;
   color: var(--muted);
-}
-
-.about-sketches {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.about-sketches img {
-  display: block;
-  width: 120px;
-  height: 160px;
-  object-fit: contain;
-  background: #fff;
 }
 
 .capabilities {

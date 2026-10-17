@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
-import { profile, projects, about, sketches, capabilities, experience } from './data.js'
+import { profile, projects, about, capabilities, experience } from './data.js'
 import './App.css'
 
 const sections = ['work', 'about', 'contact']
@@ -177,6 +177,8 @@ function AnimatedWords({ text, start = 0 }) {
 function Hero() {
   const nameCount = profile.name.split(' ').length
   const [copied, copyEmail] = useCopyEmail()
+  const [turns, setTurns] = useState(0)
+  const flipped = turns % 2 === 1
 
   return (
     <section id="top" className="hero">
@@ -205,7 +207,22 @@ function Hero() {
         </div>
       </div>
       <div className="hero-photo hero-fade" style={{ '--i': 6 }}>
-        <img src="/about/kaylen-peace.webp" alt="Kaylen Zheng smiling and making peace signs in front of a black-and-white mural" />
+        <button
+          type="button"
+          className="flip-card"
+          onClick={() => setTurns((t) => t + 1)}
+          aria-pressed={flipped}
+          aria-label={flipped ? 'Show my photo' : 'Flip to see my Osaka Castle sketch'}
+        >
+          <span className="flip-inner" style={{ transform: `rotateY(${turns * 180}deg)` }}>
+            <img
+              className="flip-face"
+              src="/about/kaylen-peace.webp"
+              alt="Kaylen Zheng smiling and making peace signs in front of a black-and-white mural"
+            />
+            <img className="flip-face flip-back" src="/about/osaka-castle.webp" alt="Pen sketch of Osaka Castle" />
+          </span>
+        </button>
       </div>
       <a href="#work" className="scroll-cue hero-fade" style={{ '--i': 11 }} aria-label="Scroll to work">
         <span />
@@ -307,11 +324,6 @@ function About() {
           {about.map((p) => (
             <p key={p}>{p}</p>
           ))}
-          <div className="about-sketches">
-            {sketches.map((s) => (
-              <img key={s.src} src={s.src} alt={s.alt} loading="lazy" />
-            ))}
-          </div>
         </div>
         <div className="capabilities">
           {capabilities.map((c, i) => (
